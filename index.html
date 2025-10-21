@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mine's Telegram Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body style="font-family: sans-serif; text-align: center; padding-top: 50px;">
+    <h1>Assalomu alaykum, mine 👋</h1>
+    <p>This is your first Telegram Mini App!</p>
+
+    <button id="btn" style="padding: 10px 20px; border: none; border-radius: 8px; background-color: #0088cc; color: white; cursor: pointer;">
+      Send Data to Bot
+    </button>
+
+    <script>
+      const tg = window.Telegram.WebApp;
+      tg.expand();
+
+      document.getElementById("btn").addEventListener("click", () => {
+        tg.sendData("User clicked the button!");
+        alert("Data sent to bot ✅");
+      });
+    </script>
+  </body>
+</html>
+
